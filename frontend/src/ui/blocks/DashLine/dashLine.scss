@@ -1,0 +1,7 @@
+@import "../../../styles/variables";
+
+.dash-line {
+  margin-inline: 10px;
+  border-bottom: 1px dashed $clr-black;
+  width: 100%;
+}

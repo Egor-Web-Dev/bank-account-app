@@ -1,0 +1,41 @@
+{
+  "name": "coin.bank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "clean": "rm dist/bundle.js",
+    "dev": "webpack --mode=development",
+    "build": "webpack --mode=production --node-env=production",
+    "serve": "webpack serve --mode=development",
+    "cy:open": "cypress open"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-loader": "^9.2.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^7.1.2",
+    "cypress": "^14.0.1",
+    "eslint": "^9.19.0",
+    "eslint-plugin-cypress": "^4.1.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.3",
+    "node-sass": "^9.0.0",
+    "prettier": "^3.4.2",
+    "sass-loader": "^16.0.4",
+    "style-loader": "^4.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.7"
+  }
+}

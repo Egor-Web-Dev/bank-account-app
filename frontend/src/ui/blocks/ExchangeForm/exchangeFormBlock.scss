@@ -1,0 +1,34 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.exchange {
+  &__form-wrap {
+    box-shadow: 0 0 20px 0 $clr-shadow;
+  }
+
+  &__form {
+    gap: 25px;
+
+    .form__fieldset-top {
+      gap: 20px;
+
+      .form__field {
+        gap: 20px;
+        flex-wrap: nowrap;
+      }
+
+      .select {
+        max-width: 134px;
+      }
+    }
+
+    .field-sum {
+      gap: 6px;
+      flex-wrap: nowrap;
+    }
+
+    &--loader {
+      height: 266px;
+    }
+  }
+}

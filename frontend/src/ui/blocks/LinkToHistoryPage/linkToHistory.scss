@@ -1,0 +1,16 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.link-to-history {
+  @include m-full-absolute;
+  @include m-full-screen;
+  z-index: 100;
+  outline: none;
+  border-radius: inherit;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease-in-out;
+
+  &:focus-visible {
+    box-shadow: 0 0 20px 0 $clr-primary;
+  }
+}

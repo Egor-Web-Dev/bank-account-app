@@ -1,0 +1,22 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.auth {
+  height: calc(100vh - #{$header-min-height});
+
+  &__form-wrapper {
+    @include m-set-max-width(500px);
+    align-items: center;
+    padding: 50px 40px;
+    background-color: $clr-athens-gray;
+  }
+
+  &__content {
+    align-items: center;
+  }
+
+  .heading {
+    margin-bottom: 35px;
+    padding-right: 10px;
+  }
+}

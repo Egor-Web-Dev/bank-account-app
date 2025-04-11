@@ -1,0 +1,15 @@
+.account-history {
+  &__body {
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  &__middle-row {
+    gap: 50px;
+    width: 100%;
+  }
+
+  &__balance-chart {
+    width: 51%;
+  }
+}

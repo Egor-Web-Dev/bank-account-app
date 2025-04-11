@@ -1,0 +1,71 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.table-wrapper {
+  position: relative;
+  grid-area: table;
+  flex-direction: column;
+  padding: 25px 50px;
+  border-radius: 50px;
+  width: 100%;
+  background-color: $clr-athens-gray;
+
+  &__heading {
+    margin-bottom: 25px;
+  }
+
+  .transactions-table {
+    display: block;
+    margin-bottom: 50px;
+    font-family: "Ubuntu", sans-serif;
+
+    &__head {
+      display: block;
+      border-radius: 15px;
+      color: $clr-white;
+      background-color: $clr-primary;
+    }
+
+    &__row-wrapper {
+      display: block;
+      padding: 20px 50px;
+    }
+
+    &__row {
+      justify-content: space-between;
+    }
+
+    &__body-row {
+      border-bottom: 2px solid $clr-secondary-light;
+    }
+
+    &__cell {
+      width: calc(100% / 4);
+      text-align: center;
+    }
+
+    &__head-cell {
+      @include m-set-font(20px, 500, 120%);
+    }
+
+    &__body {
+      display: block;
+    }
+
+    &__body-cell {
+      @include m-set-font(16px, 400, 150%);
+    }
+  }
+
+  .amount-cell--output {
+    color: $clr-red-error;
+  }
+
+  .amount-cell--input {
+    color: $clr-green-success;
+  }
+
+  &--loader {
+    height: 345px;
+  }
+}

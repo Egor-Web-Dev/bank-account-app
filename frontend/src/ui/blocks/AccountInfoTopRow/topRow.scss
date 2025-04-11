@@ -1,0 +1,33 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.top-row {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-family: "Work Sans", sans-serif;
+
+  &__account-number {
+    @include m-set-font(34px, 400, 117%);
+
+    &--loader {
+      @include m-set-max-width(367px);
+      height: 40px;
+    }
+  }
+
+  &__balance-wrapper {
+    @include m-set-font(20px, 400, 117%);
+    gap: 50px;
+    align-items: center;
+
+    &--loader {
+      @include m-set-max-width(201px);
+      height: 23px;
+    }
+  }
+
+  &__balance-text {
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,44 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.nav {
+  font-family: "Ubuntu", sans-serif;
+
+  &--hidden {
+    display: none;
+  }
+
+  &__list {
+    gap: 25px;
+  }
+
+  &__link {
+    @include m-set-font(16px, 500, 125%);
+    padding: 16px 24px;
+    border: 1px solid $clr-primary;
+    border-radius: 7px;
+    color: $clr-primary;
+    background-color: $clr-white;
+    outline: none;
+    transition:
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
+
+    &--active {
+      background-color: $clr-secondary;
+      pointer-events: none;
+    }
+
+    &:hover {
+      @include m-set-bg-color($clr-secondary, $clr-secondary-light);
+    }
+
+    &:focus-visible {
+      @include m-set-bg-color($clr-secondary, $clr-secondary-light);
+    }
+
+    &:active {
+      @include m-set-bg-color($clr-primary, lighten($clr-secondary-light, 5%));
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.input {
+  padding: 10px 16px;
+  border: 1px solid $clr-gray-chateau;
+  border-radius: 7px;
+  width: 300px;
+  height: 44px;
+  font-size: 16px;
+  color: $clr-pale-sky;
+  outline: none;
+  transition:
+    border-color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out;
+
+  &--error {
+    border-color: $clr-red-error !important;
+  }
+
+  &--success {
+    border-color: $clr-green-success !important;
+  }
+
+  &:hover {
+    @include m-set-bg-color($clr-primary, lighten($clr-primary, 55%));
+  }
+
+  &:focus-visible {
+    @include m-set-bg-color($clr-primary, lighten($clr-primary, 50%));
+  }
+}

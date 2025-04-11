@@ -1,0 +1,81 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.pagination {
+  gap: 20px;
+  align-items: center;
+  align-self: center;
+  font-family: "Ubuntu", sans-serif;
+
+  &__list {
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__item {
+    color: $clr-gray-chateau;
+
+    &--active > .pagination__btn {
+      color: $clr-white;
+      background-color: $clr-primary;
+    }
+  }
+
+  &__btn {
+    @include m-set-font(16px, 700, 150%);
+    padding: 8px 15px;
+    border-radius: 7px;
+    color: $clr-gray-chateau;
+    outline: none;
+    transition:
+      color 0.15s ease-in-out,
+      background-color 0.15s ease-in-out;
+
+    &:hover {
+      color: $clr-white;
+      background-color: $clr-primary;
+    }
+
+    &:focus-visible {
+      color: $clr-white;
+      background-color: $clr-primary;
+    }
+
+    &:active {
+      color: $clr-gray-chateau;
+      background-color: $clr-secondary;
+    }
+  }
+
+  &__arrow-btn {
+    outline: none;
+
+    & > svg {
+      transform: scale(1.5);
+      stroke: $clr-gray-chateau;
+      transition:
+        transform 0.15s ease-in-out,
+        stroke 0.15s ease-in-out;
+    }
+
+    &:hover > svg {
+      transform: scale(2);
+      stroke: $clr-primary;
+    }
+
+    &:focus-visible > svg {
+      transform: scale(2);
+      stroke: $clr-primary;
+    }
+
+    &:active > svg {
+      transform: scale(1.5);
+      stroke: $clr-gray-chateau;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+@import "./mixins";
+@import "./variables";
+
+*,
+*::before,
+*::after {
+  @include m-reset-margins;
+  box-sizing: border-box;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fieldset {
+  border: none;
+}
+
+.label {
+  @include m-set-font(16px, 500, 125%);
+  font-family: "Ubuntu", sans-serif;
+  cursor: pointer;
+}
+
+.form-wrapper {
+  flex-direction: column;
+  border-radius: 50px;
+}
+
+.container {
+  @include m-full-screen;
+  margin-inline: auto;
+  padding-inline: $container-pd-inline;
+  max-width: $container-width;
+}
+
+.content {
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+}
+
+.link-reset {
+  color: inherit;
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  width: 0.1px;
+  height: 0.1px;
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+.section {
+  padding-block: 41px;
+}
+
+.heading {
+  font-family: "Work Sans", sans-serif;
+}
+
+.heading-1 {
+  @include m-set-font(35px, 700, 117%);
+}
+
+.heading-2 {
+  @include m-set-font(20px, 700, 117%);
+  margin-bottom: 25px;
+}
+
+.align-end {
+  align-self: flex-end;
+}

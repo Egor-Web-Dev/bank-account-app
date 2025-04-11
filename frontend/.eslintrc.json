@@ -1,0 +1,18 @@
+{
+  "rules": {},
+  "env": {
+    "es6": true,
+    "browser": true,
+    "cypress/global": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["cypress"],
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  }
+}

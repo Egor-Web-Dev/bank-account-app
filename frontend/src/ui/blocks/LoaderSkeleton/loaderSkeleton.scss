@@ -1,0 +1,24 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.loader-skeleton {
+  background-color: $clr-gallery-silver;
+  background-image: linear-gradient(
+    to right,
+    $clr-gallery-silver 45%,
+    $clr-alebaster-silver 53%,
+    $clr-gallery-silver 54%
+  );
+  background-size: 250% 100%;
+  box-shadow: none !important;
+  animation: loading 2s ease-out infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0;
+  }
+}

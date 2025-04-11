@@ -1,0 +1,39 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.loader {
+  @include m-full-absolute;
+  @include m-full-screen;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
+  background-color: inherit;
+
+  &__container {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__svg {
+    @include m-full-screen;
+    animation: rotate 0.6s linear infinite;
+  }
+
+  &__circle {
+    fill: none;
+    stroke-width: 2px;
+    stroke: $clr-white;
+    stroke-linecap: round;
+    stroke-dasharray: 30;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

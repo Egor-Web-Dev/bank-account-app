@@ -1,0 +1,24 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.form {
+  @include m-set-font(16px, 500);
+  align-self: baseline;
+  font-family: "Ubuntu", sans-serif;
+
+  &__fieldset {
+    gap: 25px;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
+  &__field {
+    position: relative;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__label {
+    user-select: none;
+  }
+}

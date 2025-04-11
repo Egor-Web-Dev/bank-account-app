@@ -1,0 +1,40 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.new-transaction {
+  padding: 25px 50px;
+  background-color: $clr-athens-gray;
+
+  &__heading {
+    margin-bottom: 25px;
+  }
+
+  .form {
+    &__field {
+      gap: 15px;
+    }
+
+    &__fieldset {
+      margin-bottom: 25px;
+    }
+
+    &__send-btn {
+      margin-left: 41%;
+    }
+
+    .select__option {
+      justify-content: start;
+
+      &--active {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &--loader {
+    width: 100%;
+    height: 288px;
+  }
+}

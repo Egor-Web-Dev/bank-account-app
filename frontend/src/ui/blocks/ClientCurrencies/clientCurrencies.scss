@@ -1,0 +1,12 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.client-currencies {
+  height: 411px;
+  box-shadow: 0 0 20px 0 $clr-shadow;
+
+  &__list {
+    height: 85%;
+    outline: none;
+  }
+}

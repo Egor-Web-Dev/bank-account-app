@@ -1,0 +1,20 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.header {
+  align-items: center;
+  min-height: $header-min-height;
+  background-color: $clr-primary;
+  box-shadow: 0 0 20px 0 $clr-shadow;
+
+  &__content {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    @include m-set-font(48px, 300, 116%);
+    font-family: "Work Sans", sans-serif;
+    color: $clr-white;
+  }
+}

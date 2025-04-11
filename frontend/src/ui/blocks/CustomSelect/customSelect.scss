@@ -1,0 +1,125 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.select {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+
+  &__field {
+    position: relative;
+    align-items: center;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 16px;
+    width: 11px;
+    height: 6px;
+    background: url("../../../assets/images/arrow-down.svg") no-repeat;
+    pointer-events: none;
+    transition: transform 0.15s ease-in-out;
+  }
+
+  .open-btn {
+    @include m-set-font(16px, 400, 150%);
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    padding: 10px 30px 10px 15px;
+    border: 1px solid $clr-gray-chateau;
+    border-radius: 7px;
+    width: 300px;
+    font-family: "Ubuntu", sans-serif;
+    color: $clr-oxford-blue;
+    text-align: start;
+    background-color: $clr-white;
+    outline: none;
+    cursor: pointer;
+    transition:
+      border-color 0.15s ease-in-out,
+      background-color 0.15s ease-in-out;
+
+    &:hover {
+      @include m-set-bg-color($clr-primary, lighten($clr-primary, 55%));
+    }
+
+    &:focus-within {
+      @include m-set-bg-color($clr-primary, lighten($clr-primary, 50%));
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    z-index: 100;
+    padding-block: 10px;
+    border-radius: 7px;
+    width: 100%;
+    max-height: 250px;
+    background-color: $clr-white;
+    filter: drop-shadow(0 5px 20px $clr-shadow);
+    visibility: hidden;
+    opacity: 0;
+    overflow-y: auto;
+    scrollbar-width: none;
+    pointer-events: none;
+    transform: translateY(-10%);
+  }
+
+  &__option {
+    @include m-set-font(16px, 400, 150%);
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    width: 100%;
+    font-family: "Ubuntu", sans-serif;
+    text-align: start;
+    outline: none;
+
+    &--active {
+      &::after {
+        content: "";
+        width: 18px;
+        height: 14px;
+        background: url("../../../assets/images/check-mark.svg") no-repeat;
+        transition: transform 0.15s ease-in-out;
+      }
+    }
+
+    &:hover {
+      background-color: $clr-secondary-light;
+    }
+
+    &:focus-within {
+      background-color: $clr-secondary-light;
+    }
+  }
+
+  &--open {
+    .open-btn {
+      border-color: $clr-primary;
+    }
+
+    .open-btn + .select__icon {
+      transform: rotate(-180deg);
+    }
+
+    .dropdown {
+      visibility: visible;
+      animation: drop-select 0.2s forwards;
+    }
+  }
+}
+
+@keyframes drop-select {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+}

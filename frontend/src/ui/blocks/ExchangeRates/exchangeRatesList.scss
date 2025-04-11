@@ -1,0 +1,48 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.rate-changes {
+  height: 722px;
+  background-color: $clr-gray-mercury;
+
+  &__list {
+    padding-right: 35px;
+    height: 90%;
+    outline: none;
+  }
+
+  &__item {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      right: -35px;
+      width: 20px;
+      height: 10px;
+    }
+
+    &--increase {
+      & > .dash-line {
+        border-bottom-color: $clr-green-success;
+      }
+
+      &::after {
+        background: center/cover
+          url("../../../assets/images/arrow-up-green.svg") no-repeat;
+      }
+    }
+
+    &--decrease {
+      & > .dash-line {
+        border-bottom-color: $clr-carnation-red;
+      }
+
+      &::after {
+        background: center/cover
+          url("../../../assets/images/arrow-down-red.svg") no-repeat;
+      }
+    }
+  }
+}

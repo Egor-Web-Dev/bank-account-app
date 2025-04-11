@@ -1,0 +1,95 @@
+@font-face {
+  font: {
+    display: swap;
+    family: "Roboto";
+    weight: 500;
+    style: normal;
+  }
+  src:
+    local("Roboto-Medium"),
+    url("../assets/fonts/Roboto-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font: {
+    display: swap;
+    family: "Ubuntu";
+    weight: 500;
+    style: normal;
+  }
+  src:
+    local("Ubuntu-Medium"),
+    url("../assets/fonts/Ubuntu-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font: {
+    display: swap;
+    family: "Ubuntu";
+    weight: 400;
+    style: normal;
+  }
+  src:
+    local("Ubuntu-Regular"),
+    url("../assets/fonts/Ubuntu-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font: {
+    display: swap;
+    family: "Work Sans";
+    weight: 700;
+    style: normal;
+  }
+  src:
+    local("WorkSans-Bold"),
+    url("../assets/fonts/WorkSans-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font: {
+    display: swap;
+    family: "Work Sans";
+    weight: 300;
+    style: normal;
+  }
+  src:
+    local("WorkSans-Light"),
+    url("../assets/fonts/WorkSans-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font: {
+    display: swap;
+    family: "Work Sans";
+    weight: 500;
+    style: normal;
+  }
+  src:
+    local("WorkSans-Medium"),
+    url("../assets/fonts/WorkSans-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font: {
+    display: swap;
+    family: "Work Sans";
+    weight: 400;
+    style: normal;
+  }
+  src:
+    local("WorkSans-Regular"),
+    url("../assets/fonts/WorkSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font: {
+    display: swap;
+    family: "Work Sans";
+    weight: 600;
+    style: normal;
+  }
+  src:
+    local("WorkSans-SemiBold"),
+    url("../assets/fonts/WorkSans-SemiBold.woff2") format("woff2");
+}

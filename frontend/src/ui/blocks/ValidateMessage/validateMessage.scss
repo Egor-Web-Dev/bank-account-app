@@ -1,0 +1,43 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.error-wrapper,
+.success-wrapper {
+  @include m-set-max-width(300px);
+  position: absolute;
+  left: 101%;
+  z-index: 10;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  animation: validate-message-shows 0.15s ease-in-out forwards;
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__message {
+    padding: 10px;
+    border-radius: 7px;
+  }
+}
+
+.error-wrapper__message {
+  color: $clr-red-error;
+  background-color: lighten($clr-red-error, 50%);
+}
+
+.success-wrapper__message {
+  color: $clr-green-success;
+  background-color: lighten($clr-green-success, 30%);
+}
+
+@keyframes validate-message-shows {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

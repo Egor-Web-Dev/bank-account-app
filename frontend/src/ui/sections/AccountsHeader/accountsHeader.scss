@@ -1,0 +1,11 @@
+.accounts {
+  .heading {
+    margin-right: 40px;
+  }
+
+  &__new-account-btn {
+    margin-left: auto;
+    padding-inline: 27px;
+    min-width: 234px;
+  }
+}

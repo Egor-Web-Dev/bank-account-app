@@ -1,0 +1,38 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.page-message {
+  @include m-full-absolute;
+  @include m-set-font(20px, 500);
+  left: 50%;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+  border-radius: 7px;
+  max-width: 50%;
+  font-family: "Ubuntu", sans-serif;
+  transform: translate(-50%, 0);
+  animation: page-message-shows 0.15s ease-in-out backwards;
+
+  &--success {
+    color: $clr-green-success;
+    background-color: lighten($clr-green-success, 30%);
+  }
+
+  &--error {
+    color: $clr-red-error;
+    background-color: lighten($clr-red-error, 50%);
+  }
+}
+
+@keyframes page-message-shows {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}

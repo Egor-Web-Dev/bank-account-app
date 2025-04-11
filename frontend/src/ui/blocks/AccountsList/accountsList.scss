@@ -1,0 +1,60 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.accounts {
+  &__list {
+    flex-wrap: wrap;
+    gap: 50px 70px;
+    width: 100%;
+  }
+
+  &__item {
+    width: calc((100% - 70px * 2) / 3);
+  }
+
+  &__item--loader {
+    border-radius: 9px;
+    min-height: 156px;
+  }
+
+  .card {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22px;
+    border-radius: 9px;
+    min-height: 156px;
+    box-shadow: 0px 5px 20px $clr-shadow;
+
+    &__bottom-row {
+      align-items: flex-end;
+    }
+
+    &__id {
+      @include m-set-font(18px, 500, 122%);
+      margin-bottom: 9px;
+      font-family: "Roboto", sans-serif;
+    }
+
+    &__balance {
+      @include m-set-font(14px, 400, 143%);
+      font-family: "Ubuntu", sans-serif;
+    }
+
+    &__transaction-block {
+      font: {
+        family: "Work Sans", sans-serif;
+        size: 13px;
+      }
+    }
+
+    &__transaction {
+      margin-bottom: 3px;
+      font-weight: 700;
+    }
+
+    &__btn {
+      margin-left: auto;
+      padding-block: 16px;
+    }
+  }
+}

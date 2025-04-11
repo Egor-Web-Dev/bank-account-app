@@ -1,0 +1,33 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.primary-btn {
+  @include m-set-font(16px, 400, 125%);
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 22px;
+  border-radius: 7px;
+  font-family: "Ubuntu", sans-serif;
+  color: $clr-white;
+  background-color: $clr-primary;
+  outline: none;
+  transition: background-color 0.15s ease-in-out;
+
+  &__icon {
+    margin-right: 13px;
+    font-size: 0;
+  }
+
+  &:hover {
+    background-color: lighten($clr-primary, 30%);
+  }
+
+  &:focus-visible {
+    background-color: lighten($clr-primary, 30%);
+  }
+
+  &:active {
+    background-color: darken($clr-primary, 15%);
+  }
+}

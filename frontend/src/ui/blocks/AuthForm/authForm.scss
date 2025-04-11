@@ -1,0 +1,19 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.auth {
+  &__fieldset {
+    margin-bottom: 30px;
+  }
+
+  .form {
+    &__label {
+      margin-right: 18px;
+      line-height: 125%;
+    }
+
+    &__submit-btn {
+      margin-left: 75px;
+    }
+  }
+}
